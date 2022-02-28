@@ -18,14 +18,10 @@
 }
 
 .top {
+    position: absolute;
     cursor: pointer;
-    transition: all 100ms ease-in-out;
+    transition: all 200ms ease-in-out;
     &:hover {
         transform: scale(1.1) translate(10px, 10px);
     }
-}
-
-.draw {
-    transition: all 100ms ease-in-out;
-    transform: scale(1.2) rotateY(180deg) !important;
 }

@@ -1,7 +1,5 @@
 <div id="table">
     <div id="stack">
-        <img *ngFor="let c of [0,1,2,3]; let i = index;" [ngStyle]="{'right.px': i*0.1}" src="../../assets/cards/back/BackWhite.png">
-        <img class="top" style="right:1px" src="../../assets/cards/back/BackWhite.png" (click)="drawCard()" [class.draw]="drawAnimation">
-        <img *ngIf="drawAnimation" style="right:1px" src="../../assets/cards/spades/Ace.png" (click)="drawCard()" [class.draw]="drawAnimation">
+        <app-card></app-card>
     </div>
 </div>

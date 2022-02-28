@@ -1,93 +1,87 @@
-    @font-face {
-        // font-family: Blaze;
-        // src: url(../../assets/fonts/CampfireBlaze-PK2rZ.otf) format(otf);
-        font-family: "Blaze";
-        src: url("../../assets/fonts/CampfireBlaze-PK2rZ.otf") format("otf");
-    }
-    
-    @font-face {
-        font-family: "Phoenix";
-        src: url("../../assets/fonts/PhoenixOne.ttf") format("ttf"), url("../../assets/fonts/PhoenixTwo.ttf") format("ttf");
-    }
-    
-    .flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #forge {
-        width: 100vw;
-        height: 100vh;
-        background-image: url("../../assets/img/forge2.jpg");
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        flex-direction: column;
-    }
-    
-    #ringAndCards {
-        position: relative;
-    }
-    
-    #ring {
-        width: 320px;
-        height: 400px;
-        background-image: url("../../assets/img/ring.png");
-        background-position: cover;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    
-    #cards {
-        width: 150px;
-        height: 150px;
-        background-image: url("../../assets/img/fourcards.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 25%;
-    }
-    
-    #plateTitle {
-        width: 330px;
-        height: 150px;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    
-    #plateStart {
-        width: 160px;
-        height: 80px;
-        cursor: pointer;
-        &:hover {
-            filter: brightness(1.1);
-        }
-    }
-    
-    .plate {
-        background-image: url("../../assets/img/plate.png");
-        background-position: center;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
-    
-    .fireFont {
-        font-family: Blaze;
-        background: -webkit-linear-gradient(darkorange, red);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-    }
-    
-    .fsBig {
-        font-size: 48px;
-    }
-    
-    .fsSmall {
-        font-size: 24px;
-    }
+   @font-face {
+       font-family: "Play";
+       src: url("../../assets/fonts/PlaySetanRegular-RpLGA.ttf");
+   }
+   
+   .flex {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   #forge {
+       width: 100vw;
+       height: 100vh;
+       background-image: url("../../assets/img/forge2.jpg");
+       background-position: center;
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+       flex-direction: column;
+   }
+   
+   #ringAndCards {
+       position: relative;
+   }
+   
+   #ring {
+       width: 320px;
+       height: 400px;
+       background-image: url("../../assets/img/ring.png");
+       background-position: cover;
+       background-size: contain;
+       background-repeat: no-repeat;
+   }
+   
+   #cards {
+       width: 150px;
+       height: 150px;
+       background-image: url("../../assets/img/fourcards.png");
+       background-position: center;
+       background-size: contain;
+       background-repeat: no-repeat;
+       position: absolute;
+       top: 25%;
+   }
+   
+   #plateTitle {
+       width: 330px;
+       height: 150px;
+   }
+   
+   a {
+       text-decoration: none;
+   }
+   
+   #plateStart {
+       width: 160px;
+       height: 80px;
+       cursor: pointer;
+       &:hover {
+           filter: brightness(1.1);
+       }
+   }
+   
+   .plate {
+       background-image: url("../../assets/img/plate.png");
+       background-position: center;
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+   }
+   
+   .fireFont {
+       font-family: Play;
+       background: -webkit-linear-gradient(darkorange, red);
+       -webkit-background-clip: text;
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
+       text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+       user-select: none;
+   }
+   
+   .fsBig {
+       font-size: 50px;
+   }
+   
+   .fsSmall {
+       font-size: 22px;
+   }

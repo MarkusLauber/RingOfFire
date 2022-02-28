@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from 'src/models/game';
+import { CardComponent } from 'src/app/card/card.component';
 
 @Component({
   selector: 'app-table',
@@ -6,13 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-drawAnimation=false;
-  constructor() { }
+  game: Game;
+
+  constructor() {this.game = new Game()}
 
   ngOnInit(): void {
+
   }
 
-  drawCard(){
-    this.drawAnimation=true;
+  newGame(){
+    ;
+    console.log(this.game);
   }
+
+
+
+
 }

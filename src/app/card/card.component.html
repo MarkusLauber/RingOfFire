@@ -1,0 +1,4 @@
+<div class="card">
+    <img class="top" src="assets/cards/BackWhite.png" (click)="drawCard()" [class.drawBack]="drawAnimationBack">
+    <img *ngIf="drawAnimationTop" src="assets/cards/{{ currentCardImg }}" (click)="drawCard()" [class.drawTop]="drawAnimationTop">
+</div>
