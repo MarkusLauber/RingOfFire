@@ -1,5 +1,6 @@
 <div id="table">
-    <div id="stack">
-        <app-card></app-card>
+    <button (click)="this.newGame()">Reset</button>
+    <div id="stackTable">
+        <app-card *ngFor=" let cards of this.decksize"></app-card>
     </div>
 </div>

@@ -4,24 +4,17 @@
     background-image: url("/assets/img/rusty.jpg");
     background-size: 100% 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: flex-end;
 }
 
-#stack {
+#stackTable {
     position: relative;
+    margin-left: 80px;
+    margin-bottom: 290px;
     img {
         position: absolute;
         width: 150px;
         height: 210px;
-    }
-}
-
-.top {
-    position: absolute;
-    cursor: pointer;
-    transition: all 200ms ease-in-out;
-    &:hover {
-        transform: scale(1.1) translate(10px, 10px);
     }
 }

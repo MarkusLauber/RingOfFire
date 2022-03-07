@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from 'src/models/game';
+// import { Game } from 'src/models/game';
 import { CardComponent } from 'src/app/card/card.component';
+import { GameValuesService } from '../game-values.service';
 
 @Component({
   selector: 'app-table',
@@ -8,20 +9,26 @@ import { CardComponent } from 'src/app/card/card.component';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-  game: Game;
+  game;
+  i:number=1;
+  decksize: number[];
+  top:number;
 
-  constructor() {this.game = new Game()}
+  constructor() {
+    this.top=51;
+    this.game= GameValuesService;
+  }
 
   ngOnInit(): void {
-
+    this.decksize= Array(52).fill(this.i++);
   }
 
   newGame(){
-    ;
-    console.log(this.game);
+    // this.game.resetGame();
+    console.log(this.game.currentCard);
   }
 
-
+ 
 
 
 }

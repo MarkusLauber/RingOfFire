@@ -1,34 +1,66 @@
+:host {
+    --angle: 0deg;
+    --offsetX: 0px;
+    --offsetY: 0px;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    user-select: none;
+    img {
+        position: absolute;
+        width: 150px;
+        height: 210px;
+        transition: all 100ms ease-in-out;
+        &:hover {
+            transform: rotate(20deg);
+        }
+    }
+}
+
+#top {
+    pointer-events: none;
+}
+
 .drawBack {
-    // transition: all 500ms ease-in-out;
-    transform: scale(1.1)!important;
-    animation: aniBack ease-in-out 500ms;
+    transition: all 400ms ease-in-out;
+    // transform: !important;
+    animation: aniBack ease-in-out 400ms forwards;
     pointer-events: none;
 }
 
 .drawTop {
     position: absolute;
-    // transition: all 500ms ease-in-out;
-    transform: translate(300px, -300px)!important;
-    animation: aniTop 500ms ease-in-out;
+    transition: all 400ms ease-in-out;
+    transform: translate(calc(300px + var(--offsetX)), calc(-300px + var(--offsetY))) rotate(var(--angle))!important;
+    animation: aniTop 400ms ease-in-out;
 }
 
 @keyframes aniBack {
     0% {
-        transform: scale(1.1) translate(10px, 10px);
+        transform: rotate(20deg);
+        opacity: 100%;
+    }
+    99% {
+        transform: rotateY(85deg);
+        opacity: 100%;
     }
     100% {
-        transform: scale(1.1) translate(10px, 10px) rotateY(90deg);
+        transform: rotateY(85deg);
+        opacity: 0;
     }
 }
 
 @keyframes aniTop {
     0% {
-        transform: scale(1.1) rotateY(90deg) translate(10px, 10px);
+        transform: rotateY(85deg);
     }
     50% {
-        transform: scale(1.1) rotateY(0deg) translate(10px, 10px);
+        transform: rotateY(0deg);
     }
     100% {
-        transform: translate(300px, -300px)
+        transform: translate(calc(300px + var(--offsetX)), calc(-300px + var(--offsetY))) rotate(var(--angle));
     }
 }

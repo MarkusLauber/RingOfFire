@@ -1,4 +1,4 @@
 <div class="card">
-    <img class="top" src="assets/cards/BackWhite.png" (click)="drawCard()" [class.drawBack]="drawAnimationBack">
-    <img *ngIf="drawAnimationTop" src="assets/cards/{{ currentCardImg }}" (click)="drawCard()" [class.drawTop]="drawAnimationTop">
+    <img id="back" src="assets/cards/BackWhite.png" (click)="drawCard()" [class.drawBack]="drawAnimationBack">
+    <img id="top" *ngIf="drawAnimationTop" src="assets/cards/{{ cardImg }}" [class.drawTop]="drawAnimationTop" [style]="'z-index:' + cardZ + '!important;'">
 </div>
